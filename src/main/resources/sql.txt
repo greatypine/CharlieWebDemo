@@ -1,0 +1,17 @@
+1、创建数据库
+CREATE DATABASE IF NOT EXISTS charlie_web_demo DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+
+2、创建数据表
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(32) NOT NULL COMMENT '用户名称',
+  `birthday` date DEFAULT NULL COMMENT '生日',
+  `sex` char(1) DEFAULT NULL COMMENT '性别',
+  `address` varchar(256) DEFAULT NULL COMMENT '地址',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+
+3、插入数据
+insert into user(username,birthday,sex,address) values('xiaohong','1991-01-02','女','中国河北') ;
+insert into user(username,birthday,sex,address) values('xiaogang','1991-01-03','男','中国山东') ;
+
